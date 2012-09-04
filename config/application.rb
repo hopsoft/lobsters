@@ -60,7 +60,7 @@ module Lobsters
   end
 end
 
-Rails.application.routes.default_url_options[:host] = "lobste.rs"
+Rails.application.routes.default_url_options[:host] = "converse.aws.af.cm"
 
 module ActiveRecord
   class Base
