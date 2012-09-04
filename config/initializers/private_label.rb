@@ -8,7 +8,7 @@ module PrivateLabel
   end
 
   def from_email
-    "noreply@#{app_domain}"
+    "noreply@#{ENV["MAILGUN_DOMAIN"]}"
   end
 end
 
