@@ -34,3 +34,8 @@ group :test, :development do
   gem "machinist"
   gem "sqlite3"
 end
+
+group :development do
+  gem "af" # AppFog
+  gem "caldecott" # Provides tunneling to AppFog db
+end
