@@ -9,7 +9,7 @@
     <link rev="canonical" rel="self alternate shorter shorturl shortlink"
       href="<%= @short_url %>" />
   <% end %>
-  <title><%= @title.present? ? "#{@title} | Lobsters" : "Lobsters" %></title>
+  <title><%= @title.present? ? "#{@title} | #{Lobsters::Application.app_name}" : Lobsters::Application.app_name %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -78,6 +78,13 @@
     </div>
   
     <div id="inside">
+      <h1>
+        Converse
+        <small style="font-weight:normal">
+          <a href="http://www.1on1.com/">ono's</a> privately hosted version of Hacker News.
+          <a href="https://github.com/hopsoft/lobsters">Forked</a> from <a href="https://github.com/jcs/lobsters">Lobsters</a>.
+        </small>
+      </h1>
       <% if flash[:error] %>
         <div class="flash-error"><%= flash[:error] %></div>
       <% elsif flash[:success] %>
