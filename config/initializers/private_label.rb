@@ -4,11 +4,11 @@ module PrivateLabel
   end
 
   def app_domain
-    "converse.aws.af.cm"
+    ENV["APP_DOMAIN"] || "localhost"
   end
 
   def from_email
-    "noreply@converse.aws.af.cm"
+    "noreply@#{app_domain}"
   end
 end
 

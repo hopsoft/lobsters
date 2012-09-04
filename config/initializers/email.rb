@@ -1,6 +1,8 @@
 ActionMailer::Base.smtp_settings = {
-  :address => "127.0.0.1",
-  :port => 25,
-  :domain => "converse.aws.af.cm",
-  :enable_starttls_auto => false,
+  :authentication => :plain,
+  :address => ENV["MAILGUN_SMTP_SERVER"],
+  :port => ENV["MAILGUN_SMTP_PORT"],
+  :domain => ENV["APP_DOMAIN"],
+  :user_name => ENV["MAILGUN_SMTP_LOGIN"],
+  :password => ENV["MAILGUN_SMTP_PASSWORD"]
 }
