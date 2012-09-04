@@ -55,8 +55,9 @@ module Lobsters
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  
+
     config.cache_store = :memory_store
+    config.secret_token = ENV["SECRET_TOKEN"] || 'e8fd2f339970dbc4767c8453aff3a39410983aef1b46d73f9df873562a5300ad'
   end
 end
 
